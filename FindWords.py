@@ -6,6 +6,7 @@ import codecs,re,string
 # Initializing
 
 dic_file='Persian-Spell-Checker/Moin_Key_Words'
+# dic_file='Word_collection_1.txt'
 
 dic_words = [line.strip().replace(', ', ',').split('\t') for line in codecs.open(dic_file, encoding='utf-8')]
 
@@ -16,7 +17,7 @@ print(len(dic_words))
 word=dic_words[0][0]
 # print(word)
 print(word[::-1])
-print(type(word[::-1]))
+# print(type(word[::-1]))
 # print(dir(word)) 
 
 # words=open('Persian-Spell-Checker/Moin_Key_Words', mode='r' ,encoding='utf-8')
@@ -33,8 +34,9 @@ letter_list="ابلق"
 for i in letter_list:
     for j in letter_list:
         temp_word=i+j
-        print(temp_word)
+        # print(temp_word)
         # print(type(temp_word))
+        print(temp_word in dic_words)
         if list(temp_word) in dic_words:
             # print(temp_word==di)
             print(temp_word)
