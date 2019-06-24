@@ -14,7 +14,7 @@ dic_words = [line.strip().replace(', ', ',').split('\t') for line in codecs.open
 
 # print(len(dic_words))
 
-word=dic_words[0][0]
+# word=dic_words[0][0]
 # print(word)
 # print(word[::-1])
 # print(type(word[::-1]))
@@ -26,7 +26,7 @@ word=dic_words[0][0]
 # print(words.readlines())
 # words=words
 
-letter_list="صبر"
+letter_list="ادزلمنی"
 
 # print(letter_list[0])
 # Two words
@@ -34,6 +34,7 @@ letter_list="صبر"
 count = 0
 
 for i in letter_list:
+    # Words with 2 letters
     for j in letter_list:
         temp_word=i+j
         list_temp_word=[temp_word[::-1]]
@@ -41,6 +42,7 @@ for i in letter_list:
             print(temp_word)
             count+=1
         
+        # Words with 3 letters
         for k in letter_list:
             temp_word=i+j+k
             list_temp_word=[temp_word[::-1]]
@@ -48,6 +50,7 @@ for i in letter_list:
                 print(temp_word)
                 count+=1
 
+            # Words with 4 letters
             for l in letter_list:
                 temp_word=i+j+k+l
                 list_temp_word=[temp_word[::-1]]
@@ -55,12 +58,30 @@ for i in letter_list:
                     print(temp_word)
                     count+=1
 
+                # Words with 5 letters
                 for m in letter_list:
                     temp_word=i+j+k+l+m
                     list_temp_word=[temp_word[::-1]]
                     if list_temp_word in dic_words[::]:
                         print(temp_word)
                         count+=1
+
+                    # Words with 6 letters
+                    for n in letter_list:
+                        temp_word=i+j+k+l+m+n
+                        list_temp_word=[temp_word[::-1]]
+                        if list_temp_word in dic_words[::]:
+                            print(temp_word)
+                            count+=1
+
+
+                        # Words with 7 letters
+                        for o in letter_list:
+                            temp_word=i+j+k+l+m+o
+                            list_temp_word=[temp_word[::-1]]
+                            if list_temp_word in dic_words[::]:
+                                print(temp_word)
+                                count+=1
 
             
 print("{0} words have been found!".format(count))
