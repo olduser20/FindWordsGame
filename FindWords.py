@@ -75,13 +75,13 @@ for i in letter_list:
                             count+=1
 
 
-                        # Words with 7 letters
-                        for o in letter_list:
-                            temp_word=i+j+k+l+m+o
-                            list_temp_word=[temp_word[::-1]]
-                            if list_temp_word in dic_words[::]:
-                                print(temp_word)
-                                count+=1
+                        # # Words with 7 letters
+                        # for o in letter_list:
+                        #     temp_word=i+j+k+l+m+o
+                        #     list_temp_word=[temp_word[::-1]]
+                        #     if list_temp_word in dic_words[::]:
+                        #         print(temp_word)
+                        #         count+=1
 
             
 print("{0} words have been found!".format(count))
