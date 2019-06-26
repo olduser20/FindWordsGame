@@ -10,6 +10,10 @@ dic_file='Word_collection_1.txt'
 
 dic_words = [line.strip().replace(', ', ',').split('\t') for line in codecs.open(dic_file, encoding='utf-8')]
 
+
+print("This is a test for collaboration!")
+
+
 # print(type(dic_words))
 
 # print(len(dic_words))
